@@ -158,107 +158,107 @@ public class Ventana {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		JComboBox comboBox_0 = new JComboBox();
-		comboBox_0.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_0.setBounds(297, 68, 134, 22);
-		comboBox_0.setToolTipText("<html>Se medirá de acuerdo a la cantidad de características que cumpla el software. Las características son:<br>	Inicio de sesión de usuarios<br>	Uso de perfiles<br>	Asignación de permisos<br>	Encriptación de datos<br>Bueno [4] Debe cumplir con las 4 características<br>Regular [2;3] Debe cumplir de 2 a 3 características<br>Malo [0;1] Cumple 1 o ninguna característica<br><b>Debe ser bueno</b>.<br></html>");
-		frame.getContentPane().add(comboBox_0);
+		JComboBox seguridadAcceso = new JComboBox();
+		seguridadAcceso.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		seguridadAcceso.setBounds(297, 68, 134, 22);
+		seguridadAcceso.setToolTipText("<html>Se medirá de acuerdo a la cantidad de características que cumpla el software. Las características son:<br>-	Registro de usuarios<br>-	Inicio de sesión de usuarios<br>-	Encriptación de datos<br>Bueno [10] Debe cumplir con las 3 características<br>Regular [6] Debe cumplir con 2 características<br>Malo [1] Cumple 1 o ninguna característica<br><b>No debe ser malo.</b><br></html>");
+		frame.getContentPane().add(seguridadAcceso);
 		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_1.setBounds(297, 97, 134, 22);
-		comboBox_1.setToolTipText("<html>Se medirá de acuerdo al error en los resultados.<br>Bueno [<=10^-9] Los resultados tendrán un error de 10 o menor.<br>Regular [10^-3;10^-8] Los resultados tendrán un error de entre 10  y 10 <br>Malo [>=10^-2] Los resultados tendrán un error de 10 o mayor.<br><b>No debe ser malo.</b><br></html>");
-		frame.getContentPane().add(comboBox_1);
+		JComboBox exactitudResultados = new JComboBox();
+		exactitudResultados.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		exactitudResultados.setBounds(297, 97, 134, 22);
+		exactitudResultados.setToolTipText("<html>Se medirá de acuerdo al error en los resultados.<br>Bueno [10] Los resultados tendrán un error de 10^-9 o menor.<br>Regular [6] Los resultados tendrán un error de entre 10^-3 y 10^-8 <br>Malo [1] Los resultados tendrán un error de 10^-2 o mayor.<br><b>No debe ser malo.</b><br></html>");
+		frame.getContentPane().add(exactitudResultados);
 		
-		JComboBox comboBox_2 = new JComboBox();
-		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_2.setBounds(297, 155, 134, 22);
-		comboBox_2.setToolTipText("<html>Se medirá de acuerdo al porcentaje de uso del procesador de una máquina estándar (Procesador y Sistema Operativo de 64 bits, 6gb de memoria RAM).<br>Bueno [0;15] El porcentaje del uso del procesador será entre el 0% y 15%<br>Regular [16;49] porcentaje del uso del procesador será entre el 16% y 49%<br>Malo [50;100] porcentaje del uso del procesador será entre el 50% y 100%<br><b>No debe ser malo.</b><br></html>");
-		frame.getContentPane().add(comboBox_2);
+		JComboBox utilRecursos = new JComboBox();
+		utilRecursos.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		utilRecursos.setBounds(297, 155, 134, 22);
+		utilRecursos.setToolTipText("<html>Se medirá de acuerdo al porcentaje de uso del procesador de una máquina estándar (Procesador y Sistema Operativo de 64 bits, 6gb de memoria RAM).<br>Bueno [10] El porcentaje del uso del procesador será entre el 0% y 15%<br>Regular [6] porcentaje del uso del procesador será entre el 16% y 49%<br>Malo [1] porcentaje del uso del procesador será entre el 50% y 100%<br><b>No debe ser malo.</b><br></html>");
+		frame.getContentPane().add(utilRecursos);
 		
-		JComboBox comboBox_3 = new JComboBox();
-		comboBox_3.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_3.setBounds(297, 187, 134, 22);
-		comboBox_3.setToolTipText("<html>Se medirá el tiempo de respuesta del sistema ante una solicitud del usuario.<br>Bueno [0;2] El tiempo de respuesta del sistema es de 0 a 2 segundos.<br>Regular [3;5] El tiempo de respuesta del sistema es de 3 a 5 segundos.<br>Malo [>=6] El tiempo de respuesta del sistema es de 6 o mas segundos.<br><b>No debe ser malo.</b><br></html>");
-		frame.getContentPane().add(comboBox_3);
+		JComboBox compTiempo = new JComboBox();
+		compTiempo.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		compTiempo.setBounds(297, 187, 134, 22);
+		compTiempo.setToolTipText("<html>Se medirá el tiempo de respuesta del sistema ante una solicitud del usuario.<br>Bueno [10] El tiempo de respuesta del sistema es de 0 a 2 segundos.<br>Regular [6] El tiempo de respuesta del sistema es de 3 a 5 segundos.<br>Malo [1] El tiempo de respuesta del sistema es de 6 o mas segundos.<br><b>No debe ser malo.</b><br></html>");
+		frame.getContentPane().add(compTiempo);
 		
-		JComboBox comboBox_4 = new JComboBox();
-		comboBox_4.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_4.setBounds(297, 242, 134, 22);
-		comboBox_4.setToolTipText("<html>Se medirá de acuerdo a la cantidad de características que cumpla el software. Las características son:<br>	Se cuenta con un archivo de log sobre las actividades que realiza el sistema.<br>	Cuando sucede un error se protegen los datos procesados.<br>Bueno [2] Debe cumplir con las 2 características.<br>Regular [1] Debe cumplir con 1 característica.<br>Malo [0] No cumple ninguna característica.<br><b>Debe ser bueno.</b><br></html>");
-		frame.getContentPane().add(comboBox_4);
+		JComboBox toleranciaFallos = new JComboBox();
+		toleranciaFallos.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		toleranciaFallos.setBounds(297, 242, 134, 22);
+		toleranciaFallos.setToolTipText("<html>Se medirá de acuerdo a la cantidad de características que cumpla el software. Las características son:<br>-	Se cuenta con un archivo de log sobre las actividades que realiza el sistema.<br>-	Cuando sucede un error se protegen los datos procesados.<br>Bueno [10] Debe cumplir con las 2 características.<br>Regular [6] Debe cumplir con 1 característica.<br>Malo [1] No cumple ninguna característica.<br><b>Debe ser bueno.</b><br></html>");
+		frame.getContentPane().add(toleranciaFallos);
 		
-		JComboBox comboBox_5 = new JComboBox();
-		comboBox_5.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_5.setBounds(297, 271, 134, 22);
-		comboBox_5.setToolTipText("<html>Se medirá de acuerdo a la cantidad de características que cumpla el software. Las características son:<br>	El sistema puede recuperarse frente a una falla.<br>	Reanuda sus actividades y vuelve al estado en el que se encontraba.<br>Bueno [2] Debe cumplir con las 2 características.<br>Regular [1] Debe cumplir con 1 característica.<br>Malo [0] No cumple ninguna característica.<br><b>Debe ser bueno</b><br></html>");
-		frame.getContentPane().add(comboBox_5);
+		JComboBox recuperacionErrores = new JComboBox();
+		recuperacionErrores.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		recuperacionErrores.setBounds(297, 271, 134, 22);
+		recuperacionErrores.setToolTipText("<html>Se medirá de acuerdo a la cantidad de características que cumpla el software. Las características son:<br>-	El sistema puede recuperarse frente a una falla.<br>-	Reanuda sus actividades y vuelve al estado en el que se encontraba.<br>Bueno [10] Debe cumplir con las 2 características.<br>Regular [6] Debe cumplir con 1 característica.<br>Malo [1] No cumple ninguna característica.<br><b>No debe ser malo.</b><br></html>");
+		frame.getContentPane().add(recuperacionErrores);
 		
-		JComboBox comboBox_6 = new JComboBox();
-		comboBox_6.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_6.setBounds(297, 329, 134, 22);
-		comboBox_6.setToolTipText("<html>Se medirá de acuerdo al porcentaje de métodos con nombres representativos en el código<br>Bueno [85;100] Del 85 al 100% de los métodos deben tener nombres representativos.<br>Regular [60;84] Del 60 al 84% de los métodos deben tener nombres representativos.<br>Malo [<=59] El porcentaje de métodos con nombres representativos es de 59% o menos.<br><b>No debe ser malo.</b><br></html>");
-		frame.getContentPane().add(comboBox_6);
+		JComboBox codigoAnalizado = new JComboBox();
+		codigoAnalizado.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		codigoAnalizado.setBounds(297, 329, 134, 22);
+		codigoAnalizado.setToolTipText("<html>Se medirá de acuerdo al porcentaje de métodos con nombres representativos en el código<br>Bueno [10] Del 85 al 100% de los métodos deben tener nombres representativos.<br>Regular [6] Del 60 al 84% de los métodos deben tener nombres representativos.<br>Malo [1] El porcentaje de métodos con nombres representativos es de 59% o menos.<br><b>No debe ser malo.</b><br></html>");
+		frame.getContentPane().add(codigoAnalizado);
 		
-		JComboBox comboBox_7 = new JComboBox();
-		comboBox_7.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_7.setBounds(297, 358, 134, 22);
-		comboBox_7.setToolTipText("<html>Se medirá de acuerdo a la complejidad ciclomática<br>Bueno [<=10] La complejidad ciclomática es menor o igual a 10.<br>Regular [11;25] La complejidad ciclomática esta entre 11 y 25.<br>Malo [>=26] La complejidad ciclomática es mayor o igual a 26.<br><b>No debe ser malo.</b><br></html>");
-		frame.getContentPane().add(comboBox_7);
+		JComboBox codigoCambiado = new JComboBox();
+		codigoCambiado.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		codigoCambiado.setBounds(297, 358, 134, 22);
+		codigoCambiado.setToolTipText("<html>Se medirá de acuerdo a la complejidad ciclomática<br>Bueno [10] La complejidad ciclomática es menor o igual a 10.<br>Regular [6] La complejidad ciclomática esta entre 11 y 25.<br>Malo [1] La complejidad ciclomática es mayor o igual a 26.<br><b>No debe ser malo.</b><br></html>");
+		frame.getContentPane().add(codigoCambiado);
 		
-		JComboBox comboBox_8 = new JComboBox();
-		comboBox_8.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_8.setBounds(297, 387, 134, 22);
-		comboBox_8.setToolTipText("<html>Se medirá la cantidad de fallas por prueba del sistema<br>Bueno [0;1] Entre 0 a 1 error por prueba.<br>Regular [2;3] Entre 2 a 3 errores por prueba.<br>Malo [>=4] 4 o mas errores por prueba.<br><b>Debe ser bueno.</b><br></html>");
-		frame.getContentPane().add(comboBox_8);
+		JComboBox estabilidad = new JComboBox();
+		estabilidad.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		estabilidad.setBounds(297, 387, 134, 22);
+		estabilidad.setToolTipText("<html>Se medirá la cantidad de fallas por prueba del sistema<br>Bueno [10] Entre 0 a 1 error por prueba.<br>Regular [6] Entre 2 a 3 errores por prueba.<br>Malo [1] 4 o mas errores por prueba.<br><b>Debe ser bueno.</b><br></html>");
+		frame.getContentPane().add(estabilidad);
 		
-		JComboBox comboBox_9 = new JComboBox();
-		comboBox_9.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_9.setBounds(297, 445, 134, 22);
-		comboBox_9.setToolTipText("<html>Se medirá de acuerdo a la cantidad de características que cumpla el software. Las características son:<br>	Cuenta con un manual de usuario incorporado al sistema con un menú.<br>	Posee una ayuda sobre la funcionalidad de cada proceso.<br>	Cuenta con un video explicativo por proceso.<br>Bueno [3] Debe cumplir con las 3 características.<br>Regular [1;2] Debe cumplir con 1 o 2 características.<br>Malo [0] No cumple ninguna característica.<br><b>No debe ser malo.</b><br></html>");
-		frame.getContentPane().add(comboBox_9);
+		JComboBox capacidadEntendido = new JComboBox();
+		capacidadEntendido.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		capacidadEntendido.setBounds(297, 445, 134, 22);
+		capacidadEntendido.setToolTipText("<html>Se medirá de acuerdo a la cantidad de características que cumpla el software. Las características son:<br>-	Cuenta con un manual de usuario incorporado al sistema con un menú.<br>-	Posee una ayuda sobre la funcionalidad de cada proceso.<br>-	Cuenta con un video explicativo por proceso.<br>Bueno [10] Debe cumplir con las 3 características.<br>Regular [6] Debe cumplir con 1 o 2 características.<br>Malo [1] No cumple ninguna característica.<br><b>No debe ser malo.</b><br></html>");
+		frame.getContentPane().add(capacidadEntendido);
 		
-		JComboBox comboBox_10 = new JComboBox();
-		comboBox_10.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_10.setBounds(297, 474, 134, 22);
-		comboBox_10.setToolTipText("<html>Se medirá el requerimiento del usuario para operar el sistema.<br>Bueno [3] El usuario puede operar el sistema sin asistencia.<br>Regular [2] El usuario requiere del manual o la ayuda para operar el sistema.<br>Malo [1] El usuario requiere asistencia de personal especializado para poder operar el sistema.<br><b>No debe ser malo.</b><br></html>");
-		frame.getContentPane().add(comboBox_10);
+		JComboBox capacidadOperado = new JComboBox();
+		capacidadOperado.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		capacidadOperado.setBounds(297, 474, 134, 22);
+		capacidadOperado.setToolTipText("<html>Se medirá el requerimiento del usuario para operar el sistema.<br>Bueno [10] El usuario puede operar el sistema sin asistencia.<br>Regular [6] El usuario requiere del manual o la ayuda para operar el sistema.<br>Malo [1] El usuario requiere asistencia de personal especializado para poder operar el sistema.<br><b>No debe ser malo.</b><br></html>");
+		frame.getContentPane().add(capacidadOperado);
 		
-		JComboBox comboBox_11 = new JComboBox();
-		comboBox_11.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_11.setBounds(297, 503, 134, 22);
-		comboBox_11.setToolTipText("<html>Se medirán la cantidad de pasos que debe realizar el usuario para realizar una solicitud al sistema.<br>Bueno [1;3] De 1 a 3 pasos.<br>Regular [4;6] De 4 a 6 pasos.<br>Malo [>=7] 7 o más pasos.<br><b>No debe ser malo.</b><br></html>");
-		frame.getContentPane().add(comboBox_11);
+		JComboBox capacidadAtractivo = new JComboBox();
+		capacidadAtractivo.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		capacidadAtractivo.setBounds(297, 503, 134, 22);
+		capacidadAtractivo.setToolTipText("<html>Se medirán la cantidad de pasos que debe realizar el usuario para realizar una solicitud al sistema.<br>Bueno [10] De 1 a 3 pasos.<br>Regular [6] De 4 a 6 pasos.<br>Malo [1] 7 o más pasos.<br><b>No debe ser malo.</b><br></html>");
+		frame.getContentPane().add(capacidadAtractivo);
 		
-		JComboBox comboBox_12 = new JComboBox();
-		comboBox_12.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_12.setBounds(297, 561, 134, 22);
-		comboBox_12.setToolTipText("<html>Se medirá de acuerdo a la cantidad de sistemas operativos con que es compatible el sistema.<br>Bueno [3] Compatible con 3 sistemas operativos (Windows, Linux y Solaris).<br>Regular [2] Compatible con 2 sistemas operativos (Windows y Linux).<br>Malo [1] Compatible con 1 sistema operativo (Windows).<br><b>Debe ser bueno.</b><br></html>");
-		frame.getContentPane().add(comboBox_12);
+		JComboBox adaptabilidad = new JComboBox();
+		adaptabilidad.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		adaptabilidad.setBounds(297, 561, 134, 22);
+		adaptabilidad.setToolTipText("<html>Se medirá de acuerdo a la cantidad de sistemas operativos con que es compatible el sistema.<br>Bueno [10] Compatible con 3 sistemas operativos (Windows, Linux y macOS).<br>Regular [6] Compatible con 2 sistemas operativos (Windows y Linux).<br>Malo [1] Compatible con 1 sistema operativo (Windows).<br><b>Debe ser bueno.</b><br></html>");
+		frame.getContentPane().add(adaptabilidad);
 		
-		JComboBox comboBox_13 = new JComboBox();
-		comboBox_13.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
-		comboBox_13.setBounds(297, 590, 134, 22);
-		comboBox_13.setToolTipText("<html>Se medirá de acuerdo a la cantidad de pasos que se requieren para la instalación del sistema.<br>Bueno [1;3] De 1 a 3 pasos.<br>Regular [4;8] De 4 a 8 pasos.<br>Malo [>=9] 9 o más pasos.<br><b>No debe ser malo.</b><br></html>");
-		frame.getContentPane().add(comboBox_13);
+		JComboBox instalabilidad = new JComboBox();
+		instalabilidad.setModel(new DefaultComboBoxModel(new String[] {"Bueno", "Regular", "Malo"}));
+		instalabilidad.setBounds(297, 590, 134, 22);
+		instalabilidad.setToolTipText("<html>Se medirá de acuerdo a la cantidad de pasos que se requieren para la instalación del sistema.<br>Bueno [10] De 1 a 3 pasos.<br>Regular [6] De 4 a 8 pasos.<br>Malo [1] 9 o más pasos.<br><b>No debe ser malo.</b><br></html>");
+		frame.getContentPane().add(instalabilidad);
 		
-		JButton btnNewButton = new JButton("Analizar calidad");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnAnalizar = new JButton("Analizar calidad");
+		btnAnalizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(	comboBox_0.getSelectedItem().toString().equals("Bueno") &&
-					!comboBox_1.getSelectedItem().toString().equals("Malo") &&
-					!comboBox_2.getSelectedItem().toString().equals("Malo") &&
-					!comboBox_3.getSelectedItem().toString().equals("Malo") &&
-					comboBox_4.getSelectedItem().toString().equals("Bueno") &&
-					comboBox_5.getSelectedItem().toString().equals("Bueno") &&
-					!comboBox_6.getSelectedItem().toString().equals("Malo") &&
-					!comboBox_7.getSelectedItem().toString().equals("Malo") &&
-					comboBox_8.getSelectedItem().toString().equals("Bueno") &&
-					!comboBox_9.getSelectedItem().toString().equals("Malo") &&
-					!comboBox_10.getSelectedItem().toString().equals("Malo") &&
-					!comboBox_11.getSelectedItem().toString().equals("Malo") &&
-					comboBox_12.getSelectedItem().toString().equals("Bueno") &&
-					!comboBox_13.getSelectedItem().toString().equals("Malo") 
+				if(	!seguridadAcceso.getSelectedItem().toString().equals("Malo") &&
+					!exactitudResultados.getSelectedItem().toString().equals("Malo") &&
+					!utilRecursos.getSelectedItem().toString().equals("Malo") &&
+					!compTiempo.getSelectedItem().toString().equals("Malo") &&
+					toleranciaFallos.getSelectedItem().toString().equals("Bueno") &&
+					!recuperacionErrores.getSelectedItem().toString().equals("Malo") &&
+					!codigoAnalizado.getSelectedItem().toString().equals("Malo") &&
+					!codigoCambiado.getSelectedItem().toString().equals("Malo") &&
+					estabilidad.getSelectedItem().toString().equals("Bueno") &&
+					!capacidadEntendido.getSelectedItem().toString().equals("Malo") &&
+					!capacidadOperado.getSelectedItem().toString().equals("Malo") &&
+					!capacidadAtractivo.getSelectedItem().toString().equals("Malo") &&
+					adaptabilidad.getSelectedItem().toString().equals("Bueno") &&
+					!instalabilidad.getSelectedItem().toString().equals("Malo") 
 				) {
 					textField.setText("SATISFACTORIO");
 					textField.setForeground(Color.GREEN);
@@ -268,7 +268,7 @@ public class Ventana {
 				}
 			}
 		});
-		btnNewButton.setBounds(12, 633, 145, 25);
-		frame.getContentPane().add(btnNewButton);
+		btnAnalizar.setBounds(12, 633, 145, 25);
+		frame.getContentPane().add(btnAnalizar);
 	}
 }
